@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/wsed3rd/mycode/cpp/source_file/g2048/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/G2048.dir/main.cpp.o -c /home/wsed3rd/mycode/cpp/source_file/g2048/main.cpp",
+  "file": "/home/wsed3rd/mycode/cpp/source_file/g2048/main.cpp"
+}
+]
