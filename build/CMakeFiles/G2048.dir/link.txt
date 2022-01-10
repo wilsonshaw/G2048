@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/G2048.dir/main.cpp.o -o G2048 

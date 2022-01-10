@@ -1,0 +1,3 @@
+/home/wsed3rd/mycode/cpp/source_file/g2048/build/CMakeFiles/G2048.dir
+/home/wsed3rd/mycode/cpp/source_file/g2048/build/CMakeFiles/edit_cache.dir
+/home/wsed3rd/mycode/cpp/source_file/g2048/build/CMakeFiles/rebuild_cache.dir
