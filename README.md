@@ -8,4 +8,6 @@
 
 ### 文件树
 - G2048
-   - build：源文件编译主文件夹
+    - build:源文件编译主文件夹
+        - Debug
+        - Release

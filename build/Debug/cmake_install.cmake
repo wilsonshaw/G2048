@@ -1,4 +1,4 @@
-# Install script for directory: /home/wsed3rd/mycode/cpp/source_file/g2048
+# Install script for directory: /home/wilsonshaw/source/G2048
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wsed3rd/mycode/cpp/source_file/g2048/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wilsonshaw/source/G2048/build/Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

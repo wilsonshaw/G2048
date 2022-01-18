@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/wsed3rd/mycode/cpp/source_file/g2048/main.cpp" "CMakeFiles/G2048.dir/main.cpp.o" "gcc" "CMakeFiles/G2048.dir/main.cpp.o.d"
+  "/home/wilsonshaw/source/G2048/main.cpp" "CMakeFiles/G2048.dir/main.cpp.o" "gcc" "CMakeFiles/G2048.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
