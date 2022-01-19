@@ -4,4 +4,6 @@ LANGUAGES CXX
 )
 add_executable(G2048
 main.cpp
+game.hpp
+game.cpp
 )

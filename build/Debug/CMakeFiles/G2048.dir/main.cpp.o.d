@@ -1,5 +1,6 @@
 CMakeFiles/G2048.dir/main.cpp.o: /home/wilsonshaw/source/G2048/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/10/iostream \
+ /usr/include/stdc-predef.h /home/wilsonshaw/source/G2048/game.hpp \
+ /usr/include/c++/10/iostream \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
