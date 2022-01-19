@@ -3,16 +3,22 @@
 class game_basic
 {
 protected:
+    int x[16];
+    int y[16];
+    int zero;
     static int num[4][4];
     static int scorce;
-    static int getrand();
+    int getrand(int m,int n);
+public:
+    game_basic();
 };
 
 class tool: protected game_basic
 {
 protected:
-    virtual void pixel() = 0;
-    static int addrand();
+    void pixel();
+    tool* space();
+    int addrand();
     static int add();
     static int selfcheck();
     static int add_direction();
@@ -21,8 +27,6 @@ protected:
 
 class play: private tool
 {
-protected:
-    virtual void pixel();
 public:
     static int game();
     play();
