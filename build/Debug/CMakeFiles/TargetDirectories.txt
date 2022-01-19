@@ -1,3 +1,0 @@
-/home/wilsonshaw/source/G2048/build/Debug/CMakeFiles/G2048.dir
-/home/wilsonshaw/source/G2048/build/Debug/CMakeFiles/edit_cache.dir
-/home/wilsonshaw/source/G2048/build/Debug/CMakeFiles/rebuild_cache.dir
