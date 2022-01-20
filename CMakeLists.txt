@@ -1,4 +1,26 @@
 cmake_minimum_required(VERSION 3.22.0)
 project(G2048 LANGUAGES CXX)
-set(CMAKE_BUILD_TYPE Debug)
-add_executable(${PROJECT_NAME} main.cpp game.hpp game.cpp)
+
+set(CMAKE_BINARY_DIR ${PROJECT_SOURCE_DIR}/build)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/Debug/Lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/Debug/Lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/Debug/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/Release/Lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/Release/Lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/Release/bin)
+
+add_library(G2048_lib STATIC
+    src/game.cpp
+)
+target_include_directories(G2048_lib
+    PUBLIC
+        ${PROJECT_SOURCE_DIR}/include
+)
+
+add_executable(game
+    src/main.cpp
+)
+target_link_libraries(game
+    PRIVATE
+        G2048_lib
+)
