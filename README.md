@@ -2,12 +2,19 @@
 ---
 ## 目录
 
-1.文件树
+1. ### 文件树
 
 ---
 
 ### 文件树
-- G2048
-    - build:源文件编译主文件夹
-        - Debug
-        - Release
+```C++
+G2048/
+├── CMakeLists.txt
+├── include
+│   └── static
+│       └── game.hpp
+├── README.md
+└── src
+    ├── game.cpp
+    └── main.cpp
+```
