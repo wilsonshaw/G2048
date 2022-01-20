@@ -1,4 +1,4 @@
-#include "../include/static/game.hpp"
+#include "../include/game.hpp"
 #include <cstdlib>
 #include <time.h>
 
