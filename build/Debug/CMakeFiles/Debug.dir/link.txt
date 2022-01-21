@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Debug.dir/__/src/main.cpp.o -o ../../Debug/bin/Debug  ../../Debug/Lib/libG_Lib.a 

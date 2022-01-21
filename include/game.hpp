@@ -1,34 +1,48 @@
 #ifndef _GAME_HPP_INCLUDE
 #define _GAME_HPP_INCLUDE
-class game_basic
+class data
 {
-protected:
+private:
     int x[16];
     int y[16];
     int zero;
+protected:
+    bool first;
+    int first_seat_x;
+    int first_seat_y;
+    int first_value;
+    bool second;
+    int second_seat_x;
+    int second_seat_y;
+    int second_value;
     static int num[4][4];
     static int scorce;
-    int getrand(int m,int n);
+    static int getrand(int,int);
 public:
-    game_basic();
+    data();
 };
 
-class tool: protected game_basic
+class tool: protected data
 {
+private:
+    static int* down[4][4];
+    static int* left[4][4];
+    static int* right[4][4];
 protected:
-    void pixel();
-    tool* space();
-    int addrand();
+    int addrand(tool);
     static int add();
     static int selfcheck();
     static int add_direction();
     static void save();
+public:
+    tool();
 };
 
 class play: private tool
 {
+private:
+    void print();
 public:
     static int game();
-    play();
 };
 #endif

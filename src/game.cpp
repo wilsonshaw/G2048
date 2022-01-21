@@ -2,10 +2,102 @@
 #include <cstdlib>
 #include <time.h>
 
-int game_basic::num[4][4] = {};
-int game_basic::scorce = 0;
+int data::num[4][4] = {};
+int data::scorce = 0;
 
-int game_basic::getrand(int m,int n)
+int* tool::down[4][4] = {};
+int* tool::left[4][4] = {};
+int* tool::right[4][4] = {};
+
+data::data()
+{
+    int r, s;
+    zero = 0;
+    for (int i = 0; i < 4; i++)
+    {   
+        for (int j = 0; j < 4; j++)
+        {   
+            if(num[i][j] == 0)
+            {   
+                x[zero] = i, y[zero] = j, zero ++;
+            }
+        }
+    }
+    if (zero < 1) 
+    {
+        first = 0, second = 0;
+    }
+    else if (zero < 2)
+    {
+        second = 0;
+        r = getrand(0, 100);
+        first = (r > 75);
+        if (first) 
+        {
+            r = getrand(0, zero - 1);
+            first_seat_x = x[r];
+            first_seat_y = y[r];
+            r = getrand(0, 100);
+            first_value = (r > 95) ? 4 : 2;
+        }
+    }else if(zero < 3)
+    {
+        second = 0;
+        r = getrand(0, 100);
+        first = (r < 95);
+        if(first)
+        {
+            r = getrand(0, zero - 1);
+            first_seat_x = x[r];
+            first_seat_y = y[r];
+            r = getrand(0, 100);
+            first_value = (r > 95) ? 4 : 2;
+        }
+    }else if(zero < 16)
+    {
+        r = getrand(0, 100);
+        first = (r < 95);
+        if (first) 
+        {
+            r = getrand(0, zero - 1);
+            first_seat_x = x[r];
+            first_seat_y = y[r];
+            r = getrand(0, 100);
+            first_value = (r > 95) ? 4 : 2;
+            r = getrand(0, 100);
+            second = (r > 95);
+            if (second) 
+            {
+                s = getrand(0, zero - 2);
+                s = (s >= r) ? s + 1 : s;
+                second_seat_x = x[s];
+                second_seat_y = y[s];
+                s = getrand(0, 100);
+                second_value = (s > 95) ? 4 : 2;
+            }
+        }
+    }else{
+        first = 1;
+        r = getrand(0, zero - 1);
+        first_seat_x = x[r];
+        first_seat_y = y[r];
+        r = getrand(0, 100);
+        first_value = (r > 95) ? 4 : 2;
+        r = getrand(0, 100);
+        second = (r > 95);
+        if (second) 
+        {
+            s = getrand(0, zero - 2);
+            s = (s >= r) ? s + 1 : s;
+            second_seat_x = x[s];
+            second_seat_y = y[s];
+            s = getrand(0, 100);
+            second_value = (s > 95) ? 4 : 2;
+        }
+    }
+}
+
+int data::getrand(int m,int n)
 {
     int rands;
     srand(time(0));
@@ -13,46 +105,7 @@ int game_basic::getrand(int m,int n)
     return rands;
 }
 
-tool* tool::space()
+tool::tool()
 {
-    tool* ran = new tool();
-    for (int i = 0, k = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            if (num[i][j] == 0)
-            {
-                ran -> zero ++;
-                ran -> x[k] = i, ran -> y[k] = j, k++;
-            }
-        }
-    }
-    return ran;
-}
-
-game_basic::game_basic()
-{
-    for (int i = 0; i < 16; i++)
-    {
-        x[i] = 0, y[i] = 0;
-    }
-    zero = 0;
-}
-
-int tool::addrand()
-{
-    tool* ran = space();
-    int r1, r2, s1, s2, m = 100;
-    if (ran->zero > 2)
-    {
-        if (zero == 16) m += 1;
-        r1 = getrand(0, ran->zero - 1);
-        r2 = getrand(0, ran->zero - 2);
-        if (r2 >= r1) r2 += 1;
-        s1 = getrand(0, 100);
-        s2 = getrand(0, 100);
-        if (s1 > 0) num[ran->x[r1]][ran->y[r1]] = 2;
-        else if (s1 > 97 && s1 < m) num[ran->x[r1]][ran->y[r1]] = 4;
-    } 
-    return 0;
+    
 }

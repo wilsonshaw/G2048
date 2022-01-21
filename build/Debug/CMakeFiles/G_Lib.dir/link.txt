@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../Debug/Lib/libG_Lib.a CMakeFiles/G_Lib.dir/__/src/game.cpp.o
+/usr/bin/ranlib ../../Debug/Lib/libG_Lib.a
