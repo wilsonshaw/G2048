@@ -1,22 +1,22 @@
 [
 {
-  "directory": "/home/wilsonshaw/source/G2048/build/Debug",
-  "command": "/usr/bin/c++  -I/home/wilsonshaw/source/G2048/Debug/include -g -o CMakeFiles/G_Lib.dir/__/src/game.cpp.o -c /home/wilsonshaw/source/G2048/src/game.cpp",
-  "file": "/home/wilsonshaw/source/G2048/src/game.cpp"
+  "directory": "D:/source/G2048/build",
+  "command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe\" -ID:/source/G2048/Debug/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o Debug\\CMakeFiles\\G_Lib.dir\\__\\src\\game.cpp.obj -c D:\\source\\G2048\\src\\game.cpp",
+  "file": "D:\\source\\G2048\\src\\game.cpp"
 },
 {
-  "directory": "/home/wilsonshaw/source/G2048/build/Debug",
-  "command": "/usr/bin/c++  -I/home/wilsonshaw/source/G2048/Debug/include -g -o CMakeFiles/Debug.dir/__/src/main.cpp.o -c /home/wilsonshaw/source/G2048/src/main.cpp",
-  "file": "/home/wilsonshaw/source/G2048/src/main.cpp"
+  "directory": "D:/source/G2048/build",
+  "command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe\" -ID:/source/G2048/Debug/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o Debug\\CMakeFiles\\Debug.dir\\__\\src\\main.cpp.obj -c D:\\source\\G2048\\src\\main.cpp",
+  "file": "D:\\source\\G2048\\src\\main.cpp"
 },
 {
-  "directory": "/home/wilsonshaw/source/G2048/build/Release",
-  "command": "/usr/bin/c++  -I/home/wilsonshaw/source/G2048/Release/include -O3 -DNDEBUG -o CMakeFiles/G_LR.dir/__/src/game.cpp.o -c /home/wilsonshaw/source/G2048/src/game.cpp",
-  "file": "/home/wilsonshaw/source/G2048/src/game.cpp"
+  "directory": "D:/source/G2048/build",
+  "command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe\" -ID:/source/G2048/Release/include -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o Release\\CMakeFiles\\G_LR.dir\\__\\src\\game.cpp.obj -c D:\\source\\G2048\\src\\game.cpp",
+  "file": "D:\\source\\G2048\\src\\game.cpp"
 },
 {
-  "directory": "/home/wilsonshaw/source/G2048/build/Release",
-  "command": "/usr/bin/c++  -I/home/wilsonshaw/source/G2048/Release/include -O3 -DNDEBUG -o CMakeFiles/Release.dir/__/src/main.cpp.o -c /home/wilsonshaw/source/G2048/src/main.cpp",
-  "file": "/home/wilsonshaw/source/G2048/src/main.cpp"
+  "directory": "D:/source/G2048/build",
+  "command": "\"D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe\" -ID:/source/G2048/Release/include -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o Release\\CMakeFiles\\Release.dir\\__\\src\\main.cpp.obj -c D:\\source\\G2048\\src\\main.cpp",
+  "file": "D:\\source\\G2048\\src\\main.cpp"
 }
 ]

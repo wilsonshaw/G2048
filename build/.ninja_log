@@ -1,0 +1,9 @@
+# ninja log v5
+1	108	6651660105503518	Debug/CMakeFiles/G_Lib.dir/__/src/game.cpp.obj	39c7733cf092cc5e
+6	208	6651660106472690	Release/CMakeFiles/G_LR.dir/__/src/game.cpp.obj	5380ee4aa196419a
+109	292	6651660106702081	../Debug/Lib/G_Lib.lib	2cfe1150589f652
+208	303	6651660107071087	../Release/Lib/G_LR.lib	90246114b5c10c2b
+3	483	6651660109211224	Debug/CMakeFiles/Debug.dir/__/src/main.cpp.obj	854cf32497dd1ce
+5	490	6651660109261094	Release/CMakeFiles/Release.dir/__/src/main.cpp.obj	a0e247f4ddcdef54
+484	559	6651660109929305	../Debug/bin/Debug.exe	598d9a385dccc7e5
+490	570	6651660110189398	../Release/bin/Release.exe	b5eb6e544d4b7380

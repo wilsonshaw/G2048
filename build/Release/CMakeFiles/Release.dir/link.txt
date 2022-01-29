@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/Release.dir/__/src/main.cpp.o -o ../../Release/bin/Release  ../../Release/Lib/libG_LR.a 
