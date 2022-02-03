@@ -1,5 +1,0 @@
-# ninja log v5
-2	84	6655973255884196	CMakeFiles/game.dir/src/main.cpp.obj	4f202f8d333369a9
-0	950	6655973264462456	CMakeFiles/G_lib.dir/src/game.cpp.obj	dfee4f8e308ed30b
-951	968	6655973264771647	../../../lib/G_lib.lib	8b1274e6dfe36880
-968	1123	6655973266147480	../../../bin/game.exe	b4102993b08c61a2
