@@ -1,0 +1,4 @@
+D:/source/G2048/out/build/x64-Clang-Debug/CMakeFiles/G_lib.dir
+D:/source/G2048/out/build/x64-Clang-Debug/CMakeFiles/game.dir
+D:/source/G2048/out/build/x64-Clang-Debug/CMakeFiles/edit_cache.dir
+D:/source/G2048/out/build/x64-Clang-Debug/CMakeFiles/rebuild_cache.dir

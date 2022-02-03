@@ -1,10 +1,4 @@
+D:/source/G2048/build/CMakeFiles/G_lib.dir
+D:/source/G2048/build/CMakeFiles/G2048.dir
 D:/source/G2048/build/CMakeFiles/edit_cache.dir
 D:/source/G2048/build/CMakeFiles/rebuild_cache.dir
-D:/source/G2048/build/Debug/CMakeFiles/G_Lib.dir
-D:/source/G2048/build/Debug/CMakeFiles/Debug.dir
-D:/source/G2048/build/Debug/CMakeFiles/edit_cache.dir
-D:/source/G2048/build/Debug/CMakeFiles/rebuild_cache.dir
-D:/source/G2048/build/Release/CMakeFiles/G_LR.dir
-D:/source/G2048/build/Release/CMakeFiles/Release.dir
-D:/source/G2048/build/Release/CMakeFiles/edit_cache.dir
-D:/source/G2048/build/Release/CMakeFiles/rebuild_cache.dir

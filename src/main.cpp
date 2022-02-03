@@ -1,7 +1,7 @@
 #include "../include/game.hpp"
-#include <iostream>
+
 int main()
 {
-    std::cout << "version beta 0.0.1" << std::endl;
+    UI::Game();
     return 0;
 }

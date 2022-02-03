@@ -1,0 +1,12 @@
+[
+{
+  "directory": "D:/source/G2048/out/build/x64-Clang-Debug",
+  "command": "\"D:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe\"  /nologo -TP -ID:\\source\\G2048\\include -m64 -fdiagnostics-absolute-paths  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\G_lib.dir\\src\\game.cpp.obj /FdTARGET_COMPILE_PDB -c -- D:\\source\\G2048\\src\\game.cpp",
+  "file": "D:\\source\\G2048\\src\\game.cpp"
+},
+{
+  "directory": "D:/source/G2048/out/build/x64-Clang-Debug",
+  "command": "\"D:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe\"  /nologo -TP -ID:\\source\\G2048\\include -m64 -fdiagnostics-absolute-paths  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\game.dir\\src\\main.cpp.obj /FdTARGET_COMPILE_PDB -c -- D:\\source\\G2048\\src\\main.cpp",
+  "file": "D:\\source\\G2048\\src\\main.cpp"
+}
+]

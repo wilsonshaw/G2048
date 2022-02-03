@@ -2,11 +2,17 @@
 #define _GAME_HPP_INCLUDE
 class data
 {
+protected:
+    static int num[4][4];
+    static int scorce;
+};
+
+class tool: protected data
+{
 private:
     int x[16];
     int y[16];
     int zero;
-protected:
     bool first;
     int first_seat_x;
     int first_seat_y;
@@ -15,34 +21,27 @@ protected:
     int second_seat_x;
     int second_seat_y;
     int second_value;
-    static int num[4][4];
-    static int scorce;
-    static int getrand(int,int);
-public:
-    data();
-};
-
-class tool: protected data
-{
-private:
     static int* down[4][4];
     static int* left[4][4];
     static int* right[4][4];
+    static int getrand(int, int);
+    static int TransScorces(int*);
 protected:
-    int addrand(tool);
-    static int add();
-    static int selfcheck();
-    static int add_direction();
-    static void save();
+    static bool runConditionJudgement;
+    static bool gameEndConditionJudgement;
+    static bool AddRand(tool);
+    static bool AddRule(int*[][4]);
+    static bool AddRule();
+    static bool Add(char);
 public:
     tool();
 };
 
-class play: private tool
+class UI: private tool
 {
 private:
-    void print();
 public:
-    static int game();
+    static int Game();
+    static void PrintGame();
 };
 #endif

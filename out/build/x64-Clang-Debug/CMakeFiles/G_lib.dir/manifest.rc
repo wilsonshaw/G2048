@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+2 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "D:/source/G2048/out/build/x64-Clang-Debug/CMakeFiles/G_lib.dir/embed.manifest"
