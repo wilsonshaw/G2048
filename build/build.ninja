@@ -41,7 +41,7 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = D$:/source/G2048/build/
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target G_lib
+# Object build statements for STATIC_LIBRARY target G_lib
 
 
 #############################################
@@ -50,72 +50,68 @@ cmake_ninja_workdir = D$:/source/G2048/build/
 build cmake_object_order_depends_target_G_lib: phony || CMakeFiles/G_lib.dir
 
 build CMakeFiles/G_lib.dir/src/game.cpp.obj: CXX_COMPILER__G_lib_Debug D$:/source/G2048/src/game.cpp || cmake_object_order_depends_target_G_lib
-  DEFINES = -DG_lib_EXPORTS
   DEP_FILE = CMakeFiles\G_lib.dir\src\game.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -ID:/source/G2048/include -isystem D:/opencv/build -isystem D:/opencv/sources/include -isystem D:/opencv/sources/modules/core/include -isystem D:/opencv/sources/modules/flann/include -isystem D:/opencv/sources/modules/imgproc/include -isystem D:/opencv/sources/modules/ml/include -isystem D:/opencv/sources/modules/photo/include -isystem D:/opencv/sources/modules/dnn/include -isystem D:/opencv/sources/modules/features2d/include -isystem D:/opencv/sources/modules/imgcodecs/include -isystem D:/opencv/sources/modules/videoio/include -isystem D:/opencv/sources/modules/calib3d/include -isystem D:/opencv/sources/modules/highgui/include -isystem D:/opencv/sources/modules/objdetect/include -isystem D:/opencv/sources/modules/stitching/include -isystem D:/opencv/sources/modules/ts/include -isystem D:/opencv/sources/modules/video/include -isystem D:/opencv/sources/modules/gapi/include
+  FLAGS = -g -Xclang -gcodeview -O0
+  INCLUDES = -ID:/source/G2048/include
   OBJECT_DIR = CMakeFiles\G_lib.dir
   OBJECT_FILE_DIR = CMakeFiles\G_lib.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\G_lib.dir\
-  TARGET_PDB = ..\bin\G_lib.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\G_lib.dir\G_lib.pdb
+  TARGET_PDB = ..\lib\G_lib.pdb
 
 
 # =============================================================================
-# Link build statements for SHARED_LIBRARY target G_lib
+# Link build statements for STATIC_LIBRARY target G_lib
 
 
 #############################################
-# Link the shared library ..\bin\G_lib.dll
+# Link the static library ..\lib\G_lib.lib
 
-build ../bin/G_lib.dll ../lib/G_lib.lib: CXX_SHARED_LIBRARY_LINKER__G_lib_Debug CMakeFiles/G_lib.dir/src/game.cpp.obj | D$:/opencv/build/lib/Debug/opencv_gapi455d.lib D$:/opencv/build/lib/Debug/opencv_highgui455d.lib D$:/opencv/build/lib/Debug/opencv_ml455d.lib D$:/opencv/build/lib/Debug/opencv_objdetect455d.lib D$:/opencv/build/lib/Debug/opencv_photo455d.lib D$:/opencv/build/lib/Debug/opencv_stitching455d.lib D$:/opencv/build/lib/Debug/opencv_video455d.lib D$:/opencv/build/lib/Debug/opencv_videoio455d.lib D$:/opencv/build/lib/Debug/opencv_imgcodecs455d.lib D$:/opencv/build/lib/Debug/opencv_dnn455d.lib D$:/opencv/build/lib/Debug/opencv_calib3d455d.lib D$:/opencv/build/lib/Debug/opencv_features2d455d.lib D$:/opencv/build/lib/Debug/opencv_flann455d.lib D$:/opencv/build/lib/Debug/opencv_imgproc455d.lib D$:/opencv/build/lib/Debug/opencv_core455d.lib
-  LANGUAGE_COMPILE_FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  LINK_LIBRARIES = D:/opencv/build/lib/Debug/opencv_gapi455d.lib  D:/opencv/build/lib/Debug/opencv_highgui455d.lib  D:/opencv/build/lib/Debug/opencv_ml455d.lib  D:/opencv/build/lib/Debug/opencv_objdetect455d.lib  D:/opencv/build/lib/Debug/opencv_photo455d.lib  D:/opencv/build/lib/Debug/opencv_stitching455d.lib  D:/opencv/build/lib/Debug/opencv_video455d.lib  D:/opencv/build/lib/Debug/opencv_videoio455d.lib  D:/opencv/build/lib/Debug/opencv_imgcodecs455d.lib  D:/opencv/build/lib/Debug/opencv_dnn455d.lib  D:/opencv/build/lib/Debug/opencv_calib3d455d.lib  D:/opencv/build/lib/Debug/opencv_features2d455d.lib  D:/opencv/build/lib/Debug/opencv_flann455d.lib  D:/opencv/build/lib/Debug/opencv_imgproc455d.lib  D:/opencv/build/lib/Debug/opencv_core455d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+build ../lib/G_lib.lib: CXX_STATIC_LIBRARY_LINKER__G_lib_Debug CMakeFiles/G_lib.dir/src/game.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g -Xclang -gcodeview -O0
   OBJECT_DIR = CMakeFiles\G_lib.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  RESTAT = 1
-  TARGET_COMPILE_PDB = CMakeFiles\G_lib.dir\
-  TARGET_FILE = ..\bin\G_lib.dll
-  TARGET_IMPLIB = ..\lib\G_lib.lib
-  TARGET_PDB = ..\bin\G_lib.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\G_lib.dir\G_lib.pdb
+  TARGET_FILE = ..\lib\G_lib.lib
+  TARGET_PDB = ..\lib\G_lib.pdb
 
 # =============================================================================
-# Object build statements for EXECUTABLE target G2048
+# Object build statements for EXECUTABLE target game
 
 
 #############################################
-# Order-only phony target for G2048
+# Order-only phony target for game
 
-build cmake_object_order_depends_target_G2048: phony || cmake_object_order_depends_target_G_lib
+build cmake_object_order_depends_target_game: phony || cmake_object_order_depends_target_G_lib
 
-build CMakeFiles/G2048.dir/src/main.cpp.obj: CXX_COMPILER__G2048_Debug D$:/source/G2048/src/main.cpp || cmake_object_order_depends_target_G2048
-  DEP_FILE = CMakeFiles\G2048.dir\src\main.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
-  INCLUDES = -ID:/source/G2048/include -isystem D:/opencv/build -isystem D:/opencv/sources/include -isystem D:/opencv/sources/modules/core/include -isystem D:/opencv/sources/modules/flann/include -isystem D:/opencv/sources/modules/imgproc/include -isystem D:/opencv/sources/modules/ml/include -isystem D:/opencv/sources/modules/photo/include -isystem D:/opencv/sources/modules/dnn/include -isystem D:/opencv/sources/modules/features2d/include -isystem D:/opencv/sources/modules/imgcodecs/include -isystem D:/opencv/sources/modules/videoio/include -isystem D:/opencv/sources/modules/calib3d/include -isystem D:/opencv/sources/modules/highgui/include -isystem D:/opencv/sources/modules/objdetect/include -isystem D:/opencv/sources/modules/stitching/include -isystem D:/opencv/sources/modules/ts/include -isystem D:/opencv/sources/modules/video/include -isystem D:/opencv/sources/modules/gapi/include
-  OBJECT_DIR = CMakeFiles\G2048.dir
-  OBJECT_FILE_DIR = CMakeFiles\G2048.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\G2048.dir\
-  TARGET_PDB = ..\bin\G2048.pdb
+build CMakeFiles/game.dir/src/main.cpp.obj: CXX_COMPILER__game_Debug D$:/source/G2048/src/main.cpp || cmake_object_order_depends_target_game
+  DEP_FILE = CMakeFiles\game.dir\src\main.cpp.obj.d
+  FLAGS = -g -Xclang -gcodeview -O0
+  INCLUDES = -ID:/source/G2048/include
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\game.dir\
+  TARGET_PDB = ..\bin\game.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target G2048
+# Link build statements for EXECUTABLE target game
 
 
 #############################################
-# Link the executable ..\bin\G2048.exe
+# Link the executable ..\bin\game.exe
 
-build ../bin/G2048.exe: CXX_EXECUTABLE_LINKER__G2048_Debug CMakeFiles/G2048.dir/src/main.cpp.obj | ../lib/G_lib.lib D$:/opencv/build/lib/Debug/opencv_gapi455d.lib D$:/opencv/build/lib/Debug/opencv_highgui455d.lib D$:/opencv/build/lib/Debug/opencv_ml455d.lib D$:/opencv/build/lib/Debug/opencv_objdetect455d.lib D$:/opencv/build/lib/Debug/opencv_photo455d.lib D$:/opencv/build/lib/Debug/opencv_stitching455d.lib D$:/opencv/build/lib/Debug/opencv_video455d.lib D$:/opencv/build/lib/Debug/opencv_calib3d455d.lib D$:/opencv/build/lib/Debug/opencv_dnn455d.lib D$:/opencv/build/lib/Debug/opencv_features2d455d.lib D$:/opencv/build/lib/Debug/opencv_flann455d.lib D$:/opencv/build/lib/Debug/opencv_videoio455d.lib D$:/opencv/build/lib/Debug/opencv_imgcodecs455d.lib D$:/opencv/build/lib/Debug/opencv_imgproc455d.lib D$:/opencv/build/lib/Debug/opencv_core455d.lib || ../bin/G_lib.dll
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+build ../bin/game.exe: CXX_EXECUTABLE_LINKER__game_Debug CMakeFiles/game.dir/src/main.cpp.obj | ../lib/G_lib.lib || ../lib/G_lib.lib
+  FLAGS = -g -Xclang -gcodeview -O0
   LINK_FLAGS = -Xlinker /subsystem:console
-  LINK_LIBRARIES = ../lib/G_lib.lib  D:/opencv/build/lib/Debug/opencv_gapi455d.lib  D:/opencv/build/lib/Debug/opencv_highgui455d.lib  D:/opencv/build/lib/Debug/opencv_ml455d.lib  D:/opencv/build/lib/Debug/opencv_objdetect455d.lib  D:/opencv/build/lib/Debug/opencv_photo455d.lib  D:/opencv/build/lib/Debug/opencv_stitching455d.lib  D:/opencv/build/lib/Debug/opencv_video455d.lib  D:/opencv/build/lib/Debug/opencv_calib3d455d.lib  D:/opencv/build/lib/Debug/opencv_dnn455d.lib  D:/opencv/build/lib/Debug/opencv_features2d455d.lib  D:/opencv/build/lib/Debug/opencv_flann455d.lib  D:/opencv/build/lib/Debug/opencv_videoio455d.lib  D:/opencv/build/lib/Debug/opencv_imgcodecs455d.lib  D:/opencv/build/lib/Debug/opencv_imgproc455d.lib  D:/opencv/build/lib/Debug/opencv_core455d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
-  OBJECT_DIR = CMakeFiles\G2048.dir
+  LINK_LIBRARIES = ../lib/G_lib.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  OBJECT_DIR = CMakeFiles\game.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\G2048.dir\
-  TARGET_FILE = ..\bin\G2048.exe
-  TARGET_IMPLIB = ..\lib\G2048.lib
-  TARGET_PDB = ..\bin\G2048.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\game.dir\
+  TARGET_FILE = ..\bin\game.exe
+  TARGET_IMPLIB = ..\lib\game.lib
+  TARGET_PDB = ..\bin\game.pdb
 
 
 #############################################
@@ -144,13 +140,13 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build G2048: phony ../bin/G2048.exe
+build G_lib: phony ../lib/G_lib.lib
 
-build G2048.exe: phony ../bin/G2048.exe
+build G_lib.lib: phony ../lib/G_lib.lib
 
-build G_lib: phony ../bin/G_lib.dll
+build game: phony ../bin/game.exe
 
-build G_lib.dll: phony ../bin/G_lib.dll
+build game.exe: phony ../bin/game.exe
 
 # =============================================================================
 # Folder targets.
@@ -160,7 +156,7 @@ build G_lib.dll: phony ../bin/G_lib.dll
 #############################################
 # Folder: D:/source/G2048/build
 
-build all: phony ../bin/G_lib.dll ../bin/G2048.exe
+build all: phony ../lib/G_lib.lib ../bin/game.exe
 
 # =============================================================================
 # Built-in targets
@@ -169,14 +165,14 @@ build all: phony ../bin/G_lib.dll ../bin/G2048.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.2/CMakeCXXCompiler.cmake CMakeFiles/3.22.2/CMakeRCCompiler.cmake CMakeFiles/3.22.2/CMakeSystem.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/Clang.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/FindPackageMessage.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows-Clang-CXX.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows-Clang.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake D$:/opencv/build/OpenCVConfig-version.cmake D$:/opencv/build/OpenCVConfig.cmake D$:/opencv/build/OpenCVModules.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.2/CMakeCXXCompiler.cmake CMakeFiles/3.22.2/CMakeRCCompiler.cmake CMakeFiles/3.22.2/CMakeSystem.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/Clang.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows-Clang-CXX.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows-Clang.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.2/CMakeCXXCompiler.cmake CMakeFiles/3.22.2/CMakeRCCompiler.cmake CMakeFiles/3.22.2/CMakeSystem.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/Clang.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/FindPackageMessage.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows-Clang-CXX.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows-Clang.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake D$:/opencv/build/OpenCVConfig-version.cmake D$:/opencv/build/OpenCVConfig.cmake D$:/opencv/build/OpenCVModules.cmake: phony
+build ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.2/CMakeCXXCompiler.cmake CMakeFiles/3.22.2/CMakeRCCompiler.cmake CMakeFiles/3.22.2/CMakeSystem.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeRCInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Compiler/Clang.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows-Clang-CXX.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows-Clang.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake D$:/Program$ Files/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################
