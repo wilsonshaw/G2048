@@ -43,5 +43,6 @@ private:
 public:
     static int Game();
     static void PrintGame();
+    static void ImageTest();
 };
 #endif

@@ -3,6 +3,8 @@
 #include <cstdlib>
 #include <conio.h>
 #include <iostream>
+#include <graphics.h>
+#include <cstring>
 #include <time.h>
 #include <Windows.h>
 
@@ -331,15 +333,19 @@ bool tool::Add(char keys)
 {
     switch ((int)keys)
     {
+    case 72:
     case 'w':
         AddRule();
         break;
+    case 80:
     case 's':
         AddRule(down);
         break;
+    case 75:
     case 'a':
         AddRule(left);
         break;
+    case 77:
     case 'd':
         AddRule(right);
         break;
@@ -377,15 +383,79 @@ int UI::Game()
 
 void UI::PrintGame()
 {
-    system("cls");
-    printf("\n\n  ");
-    for (int arrRow = 0; arrRow < 4; arrRow++)
+    RECT r[16], scorceBtn, scorceTop;
+    char scorceChar[16];
+    BeginBatchDraw();
+    setbkcolor(RGB(236, 236, 236));
+    setfillcolor(WHITE);
+    settextcolor(BLACK);
+    setlinecolor(BLACK);
+    setbkmode(TRANSPARENT);
+    cleardevice();
+    fillrectangle(924, 700, 1024, 768);//菜单按钮
+    //得分栏
+    _itoa(scorce, scorceChar, 10);
+    settextstyle(50, 0, _T("楷体"));
+    fillrectangle(740, 30, 970, 170);
+    setfillcolor(RED);
+    fillrectangle(740, 30, 970, 100);
+    scorceTop = { 740, 30, 970, 100 };
+    scorceBtn = { 740, 100, 970, 170 };
+    settextcolor(WHITE);
+    drawtext(_T("SCORCE"), &scorceTop, DT_CENTER | DT_SINGLELINE | DT_VCENTER);
+    settextcolor(BLACK);
+    drawtext(scorceChar, &scorceBtn, DT_CENTER | DT_SINGLELINE | DT_VCENTER);
+    for (int rowCube = 0, cubeX = 70, cubeY = 70; rowCube < 4; rowCube++, cubeY += 150)
     {
-        for (int arrColumn = 0; arrColumn < 4; arrColumn++)
+        for (int columnCube = 0; columnCube < 4; columnCube++, cubeX = (cubeX == 520) ? 70 : cubeX + 150)
         {
-            printf("%4d  ", num[arrRow][arrColumn]);
+            char numStr[16], num2[16];
+            if (num[rowCube][columnCube] != 0)
+            {
+                settextcolor(WHITE);
+                _itoa(num[rowCube][columnCube], num2, 2);
+                setfillcolor(RGB(255, 255 - strlen(num2) / 2 * 30, 255 - (strlen(num2) - strlen(num2) / 2) * 30));
+                fillrectangle(cubeX, cubeY, cubeX + 150, cubeY + 150);
+                _itoa(num[rowCube][columnCube], numStr, 10);
+                settextstyle(100 - strlen(numStr) * 10, 0, _T("楷体"));
+                r[rowCube * 4 + columnCube] = { cubeX, cubeY, cubeX + 150, cubeY + 150 };
+                drawtext(numStr, &r[rowCube * 4 + columnCube], DT_CENTER | DT_SINGLELINE | DT_VCENTER);
+            }
+            else
+            {
+                setfillcolor(WHITE);
+                fillrectangle(cubeX, cubeY, cubeX + 150, cubeY + 150);
+            }
         }
-        printf("\n\n  ");
     }
-    printf("%d", scorce);
+    EndBatchDraw();
+}
+
+void UI::ImageTest()
+{
+    initgraph(1024, 768);
+    BeginBatchDraw();
+    setbkcolor(RGB(236, 236, 236));
+    setfillcolor(WHITE);
+    settextcolor(BLACK);
+    setlinecolor(BLACK);
+    setbkmode(TRANSPARENT);
+    cleardevice();
+    RECT r[16];
+    for (int rowCube = 0, cubeX = 70, cubeY = 70; rowCube < 4; rowCube++, cubeY += 150)
+    {
+        for (int columnCube = 0; columnCube < 4; columnCube++, cubeX = (cubeX == 520) ? 70 : cubeX + 150)
+        {
+            settextstyle(90, 0, _T("楷体"));
+            fillrectangle(cubeX, cubeY, cubeX + 150, cubeY + 150);
+            r[rowCube * 4 + columnCube] = { cubeX, cubeY, cubeX + 150, cubeY + 150 };
+            drawtext(_T("0"), &r[rowCube * 4 + columnCube], DT_CENTER | DT_SINGLELINE | DT_VCENTER);
+        }
+    }
+    fillrectangle(924, 700, 1024, 768);
+    EndBatchDraw();
+    while (1)
+    {
+
+    }
 }
